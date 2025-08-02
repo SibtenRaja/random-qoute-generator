@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    #quoteBox {
+      max-width: 600px;
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="quoteBox">Click the button to get a quote!</div>
+  <button onclick="generateQuote()">New Quote</button>
+
+  <script>
+    const quotes = [
+      "The best way to get started is to quit talking and begin doing.",
+      "Don’t let yesterday take up too much of today.",
+      "It’s not whether you get knocked down, it’s whether you get up.",
+      "If you are working on something exciting, it will keep you motivated.",
+      "All our dreams can come true, if we have the courage to pursue them.",
+      "The future belongs to those who believe in the beauty of their dreams.",
+      "Dreams come true. Without that possibility, nature would not incite us to have them.",
+      "Dream as if you'll live forever. Live as if you'll die today.",
+      "Some men see things as they are and say why. I dream things that never were and say why not.",
+      "Let us make our future now, and let us make our dreams tomorrow's reality.",
+      "Show me a person who has never made a mistake and I'll show you someone who has never achieved much.",
+      "Failure is the condiment that gives success its flavor.",
+      "Success means doing the best with what we have. Success is the doing, not the getting; in the trying, not the triumph. Success is a personal standard, reaching for the highest that is in us, becoming all that we can be.",
+      "I long to accomplish a great and noble task, but it is my chief duty to accomplish small tasks as if they were great and noble.",
+      "A man is a success if he gets up in the morning and gets to bed at night, and in between does what he wants to do."
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quoteBox").innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
